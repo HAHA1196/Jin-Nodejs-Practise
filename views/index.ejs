@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1> 代辦事項列表 </h1>
+    <input type="text" id="content" name="content">
+    <input type="submit" id="send" value="儲存">
+    <!-- 顯示出資料資料在列表上面 -->
+    <ul id="list">
+        <% for( item in todolist){ %>
+            <li>
+                <%- todolist[item].content %>
+                <input data-id="<%- item %>" type="button" value="刪除">
+            </li>
+        <% }%>
+
+        
+    </ul>
+
+    <script src="/js/all.js"></script>
+</body>
+</html>
